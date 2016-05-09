@@ -17,5 +17,9 @@ describe('Plane', function() {
     expect(plane.ground).toBeFalsy();
   })
 
+  it('starts in the air', function() {
+    expect(plane.ground).toBeFalsy();
+  })
+
 
 });

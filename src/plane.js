@@ -1,4 +1,7 @@
+'use strict';
 function Plane() {
+
+  this.ground = false;
 
   Plane.prototype.takeoff = function() {
     this.ground = false;
