@@ -21,5 +21,4 @@ describe('Plane', function() {
     expect(plane.ground).toBeFalsy();
   })
 
-
 });

@@ -7,23 +7,20 @@ function Airport() {
       if(this.planes.length > 1) {
         throw new Error("The airport is full");
       }
-      // plane.land();
+      plane.land();
       this.planes.push(plane);
     }
 
-    Airport.prototype.planes = function() {
-      return this.planes;
-    }
 }
 
-var airport = new Airport();
-var plane = new Plane();
-
-console.log(airport.planes);
-console.log(plane.ground)
-airport.land(plane);
-console.log(airport.planes.length)
-airport.land(plane);
-console.log(airport.planes.length)
-console.log(airport.planes);
-console.log(plane.ground);
+// var airport = new Airport();
+// var plane = new Plane();
+//
+// console.log(airport.planes);
+// console.log(plane.ground)
+// airport.land(plane);
+// console.log(airport.planes.length)
+// airport.land(plane);
+// console.log(airport.planes.length)
+// console.log(airport.planes);
+// console.log(plane.ground);

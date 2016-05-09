@@ -12,4 +12,11 @@ describe('Airport', function() {
     airport.land(plane);
     expect(function(){airport.land(plane); }).toThrowError("The airport is full");
   });
+
+  it('returns planes currently at the airport', function() {
+    airport.land(plane);
+    airport.land(plane);
+    expect(airport.planes).toEqual([plane, plane]);
+  });
+
 });
