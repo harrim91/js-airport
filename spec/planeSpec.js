@@ -15,10 +15,10 @@ describe('Plane', function() {
     plane.land();
     plane.takeOff();
     expect(plane.isInAirport).toBeFalsy();
-  })
+  });
 
   it('starts in the air', function() {
     expect(plane.isInAirport).toBeFalsy();
-  })
+  });
 
 });

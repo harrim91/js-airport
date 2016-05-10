@@ -5,10 +5,10 @@ function Plane() {
 
   Plane.prototype.takeOff = function() {
     this.isInAirport = false;
-  }
+  };
 
   Plane.prototype.land = function() {
     this.isInAirport = true;
-  }
+  };
 
 }
