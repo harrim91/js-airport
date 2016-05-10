@@ -5,13 +5,12 @@ describe('Plane', function() {
   var plane, airport;
 
   beforeEach(function() {
-    plane = new Plane();
-    airport = jasmine.createSpyObj('airport', ['clearForLanding']);
+    plane = new Plane();permitLanding']);
   });
 
   it('can land at an airport', function() {
     plane.land(airport);
-    expect(airport.clearForLanding).toHaveBeenCalledWith(plane);
+    expect(airport.permitLanding).toHaveBeenCalledWith(plane);
   });
 
 });

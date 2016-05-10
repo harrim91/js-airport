@@ -8,6 +8,6 @@ Airport.prototype.planes = function() {
   return this._hangar;
 };
 
-Airport.prototype.clearForLanding = function(plane) {
+Airport.prototype.permitLanding = function(plane) {
   this._hangar.push(plane);
 };
