@@ -1,17 +1,14 @@
 'use strict';
 function Plane() {
 
-  this.ground = false;
+  this.isInAirport = false;
 
-  Plane.prototype.takeoff = function() {
-    this.ground = false;
+  Plane.prototype.takeOff = function() {
+    this.isInAirport = false;
   }
 
   Plane.prototype.land = function() {
-    this.ground = true;
+    this.isInAirport = true;
   }
 
-  Plane.prototype.ground = function() {
-    return this.ground;
-  }
 }

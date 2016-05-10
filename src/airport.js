@@ -1,17 +1,27 @@
 'use strict';
 
 function Airport() {
-  this.planes = [];
+  this._hangar = [];
+};
 
-    Airport.prototype.land = function(plane) {
-      if(this.planes.length > 1) {
-        throw new Error("The airport is full");
-      }
-      plane.land();
-      this.planes.push(plane);
-    }
+Airport.prototype.planes = function() {
+  return this._hangar;
+};
 
+Airport.prototype.accept = function(plane) {
+  if(this._hangar.length >= 2) {
+    throw new Error("The airport is full");
+  }
+  plane.land();
+  this._hangar.push(plane);
 }
+
+Airport.prototype.release = function(plane) {
+  plane.takeOff();
+  var i = this._hangar.indexOf(plane);
+  this._hangar.splice(i, 1);
+};
+
 
 // var airport = new Airport();
 // var plane = new Plane();

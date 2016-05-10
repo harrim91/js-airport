@@ -6,19 +6,19 @@ describe('Plane', function() {
   });
 
   it('changes status when landing', function() {
-    plane.takeoff();
+    plane.takeOff();
     plane.land();
-    expect(plane.ground).toBeTruthy();
+    expect(plane.isInAirport).toBeTruthy();
   });
 
   it('changes status when taking off', function() {
     plane.land();
-    plane.takeoff();
-    expect(plane.ground).toBeFalsy();
+    plane.takeOff();
+    expect(plane.isInAirport).toBeFalsy();
   })
 
   it('starts in the air', function() {
-    expect(plane.ground).toBeFalsy();
+    expect(plane.isInAirport).toBeFalsy();
   })
 
 });
