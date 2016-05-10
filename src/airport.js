@@ -20,6 +20,9 @@ function Airport() {
   };
 
   Airport.prototype.release = function(plane) {
+    if(this.weather.isStormy() === true) {
+      throw new Error("It's too stormy to take off");
+    }
     plane.takeOff();
     var i = this._hangar.indexOf(plane);
     this._hangar.splice(i, 1);
