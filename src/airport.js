@@ -28,18 +28,3 @@ function Airport() {
     this._hangar.splice(i, 1);
   };
 }
-
-
-
-var airport = new Airport();
-var plane = new Plane();
-
-console.log(airport.planes);
-console.log(plane.ground);
-airport.accept(plane);
-console.log(airport.planes.length);
-airport.accept(plane);
-console.log(airport.planes.length);
-console.log(airport.planes);
-console.log(plane.ground);
-console.log(airport.weather)
